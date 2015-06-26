@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', github: "rails/rails", branch: "4-2-stable"
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'redis'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'httparty'
+gem "rails_config"
 
 group :development do
   # エラー画面をわかりやすく整形
@@ -58,4 +61,9 @@ group :development, :test do
   gem 'pry-stack_explorer'
 
   gem 'awesome_print'
+end
+
+group :test do
+   gem 'rspec-rails', '~> 3.0'
+   gem 'webmock'
 end

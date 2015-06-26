@@ -1,0 +1,6 @@
+api:
+  google:
+    url: "https://www.google.com"
+    speech:
+      path: "/speech-api/v2/recognize"
+      key: "google speech api key"
