@@ -4,3 +4,8 @@ api:
     speech:
       path: "/speech-api/v2/recognize"
       key: "google speech api key"
+  docomo:
+    url: "https://api.apigw.smt.docomo.ne.jp"
+    talk:
+      path: "/dialogue/v1/dialogue"
+      key: "docomo dialogue api key"
