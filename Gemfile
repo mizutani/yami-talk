@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'httparty'
 gem "rails_config"
+gem 'slim-rails'
+gem 'open_jtalk-ruby', git: 'git://github.com/sunny4381/open_jtalk-ruby.git'
 
 group :development do
   # エラー画面をわかりやすく整形
