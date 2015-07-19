@@ -9,8 +9,7 @@ class TalkController < ApplicationController
     reqester.talk({utt: params[:message]})
     text = reqester.get_text.present? ? reqester.get_text : 'テキストの生成に失敗しました。'
 
-    # TODO mp3対応を行う。
-    file_name = "#{Time.now.strftime('%Y%m%d%H%M%S')}.wav"
+    file_name = "#{Time.now.strftime('%Y%m%d%H%M%S')}.mp3"
     converter = Converter::TextToSpeech.new
     converter.execute(text, create_voice_path(file_name))
     # CreateVoiceJob.perform_later reqester.get_text, file_name
