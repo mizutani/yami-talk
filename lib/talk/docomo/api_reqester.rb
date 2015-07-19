@@ -56,7 +56,7 @@ module Talk::Docomo
     def body
       {
         "utt": "",
-        "context": get_context,
+        "context": 'sIjf4neXZwamcjkxj-H2GA',
       }
     end
 

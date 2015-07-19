@@ -3,12 +3,16 @@
 <head>
   <title>YamiTalk</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <h1 class="project-title blue lighten-5">俺の嫁プロジェクトⅡ プロトタイプ１</h1>
+</header>
 <%= yield %>
-
+<footer>
+</footer>
 </body>
 </html>

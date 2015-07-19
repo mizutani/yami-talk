@@ -9,3 +9,6 @@ api:
     talk:
       path: "/dialogue/v1/dialogue"
       key: "docomo dialogue api key"
+log:
+  sample:
+    test: 'log_sample_test.log'
