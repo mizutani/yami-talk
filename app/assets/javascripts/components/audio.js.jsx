@@ -21,6 +21,9 @@ var Audio = React.createClass({
   componentDidUpdate: function(){
     if(this.state.isPlay){
       React.findDOMNode(this).play();
+      this.setState({
+        isPlay: false
+      });
     }
   },
 

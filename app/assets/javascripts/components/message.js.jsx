@@ -18,5 +18,11 @@ var Message = React.createClass({
       <span className="title">USER: {this.props.userText}</span>
       <p>{this.props.talkText}</p>
     </li>;
-  }
+  },
+
+  componentDidUpdate: function(){
+    this.setState({
+      isPlay: false
+    });
+  },
 });
