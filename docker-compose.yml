@@ -1,0 +1,12 @@
+version: "3"
+services:
+  webapp:
+    build: .
+    image: erefy/yami-talk:latest
+    command: ["rails", "s", "-b", "0.0.0.0"]
+    volumes:
+      - .:/var/app
+      - /var/app/tmp
+      - /var/app/log
+    ports:
+      - "80:3000"

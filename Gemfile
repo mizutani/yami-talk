@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', github: "rails/rails", branch: "4-2-stable"
+gem 'rails', '~> 4.2'
 
 # Use mysql as the database for Active Record
 gem 'redis'
@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'httparty'
-gem "rails_config"
+gem 'config'
 gem 'slim-rails'
 gem 'open_jtalk-ruby', git: 'git://github.com/sunny4381/open_jtalk-ruby.git'
 

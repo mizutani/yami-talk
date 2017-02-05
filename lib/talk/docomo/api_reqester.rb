@@ -8,7 +8,7 @@ module Talk::Docomo
     format :json
 
     def first_talk(post_param = {})
-      talk(post_param.merge({context: nil}))
+      talk(post_param.merge({"context": nil}))
     end
 
     def talk(post_param = {})
@@ -62,7 +62,7 @@ module Talk::Docomo
 
     def header
       {
-        'Content-type': 'application/json'
+        'Content-type' => 'application/json'
       }
     end
 

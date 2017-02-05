@@ -20,7 +20,7 @@ var Audio = React.createClass({
 
   componentDidUpdate: function(){
     if(this.state.isPlay){
-      React.findDOMNode(this).play();
+      this.refs.auido.play();
       this.setState({
         isPlay: false
       });
@@ -28,7 +28,7 @@ var Audio = React.createClass({
   },
 
   render: function(){
-    return <audio id="audio">
+    return <audio id="audio" ref="auido">
             <source src={this.props.src} />
           </audio>;
   }

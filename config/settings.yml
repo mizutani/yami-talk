@@ -3,12 +3,12 @@ api:
     url: "https://www.google.com"
     speech:
       path: "/speech-api/v2/recognize"
-      key: "google speech api key"
+      key: "AIzaSyDNgDjTd_HVNH3zEUQucPaDBwagD4Ry8P8"
   docomo:
     url: "https://api.apigw.smt.docomo.ne.jp"
     talk:
       path: "/dialogue/v1/dialogue"
-      key: "docomo dialogue api key"
+      key: "533247312f444634335859784f6e794541354a504348695974665074385473424238583579385564726a33"
 log:
   sample:
     test: 'log_sample_test.log'
