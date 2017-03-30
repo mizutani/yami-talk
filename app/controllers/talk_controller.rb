@@ -2,6 +2,7 @@ class TalkController < ApplicationController
   protect_from_forgery except: :message
 
   def index
+    # talk
   end
 
   def message

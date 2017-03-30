@@ -3,12 +3,12 @@ api:
     url: "https://www.google.com"
     speech:
       path: "/speech-api/v2/recognize"
-      key: ""
+      key: ENV["GOOGLE_SPEACH_KEY"]
   docomo:
     url: "https://api.apigw.smt.docomo.ne.jp"
     talk:
       path: "/dialogue/v1/dialogue"
-      key: ""
+      key: <%= ENV["DOCOMO_TALK_KEY"] %>
 log:
   sample:
     test: 'log_sample_test.log'

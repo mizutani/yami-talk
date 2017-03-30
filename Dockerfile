@@ -6,6 +6,7 @@ RUN apt-get -y update && \
     apt-get -y install nodejs libmp3lame-dev
 
 COPY Gemfile ./
+COPY Gemfile.lock ./
 
 RUN bundle install
 
