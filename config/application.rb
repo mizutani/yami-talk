@@ -39,5 +39,6 @@ module YamiTalk
     # config.active_record.raise_in_transactional_callbacks = true
     config.autoload_paths += %W(#{config.root}/lib)
     config.react.addons = true
+    config.web_console.development_only = false
   end
 end
