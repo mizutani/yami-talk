@@ -4,7 +4,7 @@ references:
     run: bundle install --jobs 8 --retry 3
   restore_gemfile_cache: &restore_gemfile_cache
     restore_cache:
-      key:
+      keys:
         - v1-gemfile-{{ checksum "Gemfile.lock" }}-{{ .Branch }}
         - v1-gemfile-{{ checksum "Gemfile.lock" }}
         - v1-gemfile
