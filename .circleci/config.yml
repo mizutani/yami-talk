@@ -1,0 +1,32 @@
+version: 2
+references:
+  bundle_install: &bundle_install
+    run: bundle install --jobs 8 --retry 3
+  restore_gemfile_cache: &restore_gemfile_cache
+    restore_cache:
+      key:
+        - v1-gemfile-{{ checksum "Gemfile.lock" }}-{{ .Branch }}
+        - v1-gemfile-{{ checksum "Gemfile.lock" }}
+        - v1-gemfile
+  save_gemfile_cache: &save_gemfile_cache
+    save_cache:
+      key: v1-gemfile-{{ checksum "Gemfile.lock" }}-{{ .Branch }}
+      paths:
+        - vendor/bundle
+jobs:
+  rspec:
+    docker:
+      - image: circleci/ruby:2.2
+    steps:
+      - checkout
+      - *restore_gemfile_cache
+      - *bundle_install
+      - *save_gemfile_cache
+      - run:
+          name: rspec
+          comamnnd: bundle exec rspec
+workflows:
+  version: 2
+  test:
+    jobs:
+      - rspec
