@@ -25,7 +25,7 @@ jobs:
       - *save_gemfile_cache
       - run:
           name: rspec
-          comamnnd: bundle exec rspec
+          command: bundle exec rspec
 workflows:
   version: 2
   test:
