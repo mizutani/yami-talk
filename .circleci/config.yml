@@ -16,7 +16,8 @@ references:
 jobs:
   rspec:
     docker:
-      - image: circleci/ruby:2.2
+      - image: circleci/ruby:2.2-node-browsers
+    working_directory: ~/yami-talk
     steps:
       - checkout
       - *restore_gemfile_cache
